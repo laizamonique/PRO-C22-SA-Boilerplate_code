@@ -33,17 +33,12 @@ function draw() {
   image(backgroundImg,0,0,1200,600)
   Engine.update(engine);
 
-  push();
-  translate(ground.position.x, ground.position.y);
-  fill("brown");
-  rectMode(CENTER);
-  rect(0, 0, width * 2, 1);
-  pop();
+  
+  rect(ground.position.x, ground.position.y, width * 2, 1);
+  
 
   push();
-  translate(tower.position.x, tower.position.y);
-  rotate(tower.angle);
   imageMode(CENTER);
-  image(towerImage,0, 0, 160, 310);
+  image(towerImage,tower.position.x, tower.position.y, 160, 310);
   pop();  
 }
