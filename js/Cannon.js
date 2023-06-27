@@ -7,5 +7,14 @@ class Cannon {
     this.angle = angle;
     
   }
-  
+ display() {
+ push();
+translate(this.x, this.y); 
+  rotate(this.angle);
+  imageMode(center);
+image(this.cannon_image, 0, 0, this.width, this.height);
+pop();
+image(this.cannon_base,70, 20, 200, 200);
+noFill();
+} 
 }
